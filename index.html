@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+      }
+
+      label {
+        margin-bottom: 10px;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;
+      }
+
+      input[type="submit"] {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #007bff;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0069d9;
+      }
+
+      .logo {
+        background-color: #007bff;
+        display: inline-block;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      .logo img {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img src="https://static.wixstatic.com/media/76d4fa_46606fb0b9814873b109c00f20c81601~mv2.png/v1/fill/w_147,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/logo%20branca.png" alt="Chatbot logo" width="147" height="40">
+      </div>
+      <h1>Login</h1>
+      <form>
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password">
+        <input type="submit" value="Entrar" onclick="login()">
+      </form>
+    </div>
+    <script>
+      function login(){
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        // Verifica se o usuário e senha estão corretos
+        if (username === "braulio" && password === "12345") {
+          // Redireciona para a página do chatbot
+          window.location.href = "https://candid-bublanina-8ded0e.netlify.app";
+        } else {
+          alert("Usuário ou senha inválidos");
+        }
+      }
+    </script>
+  </body>
+</html>
